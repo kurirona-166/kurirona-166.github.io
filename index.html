@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your Name – Researcher / Engineer">
+  <title>Your Name</title>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+
+  <!-- Font Awesome 6.5.2 -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+
+    <!-- ==============================
+         Profile
+    ============================== -->
+    <section class="section section--profile">
+      <div class="profile">
+        <div class="profile__photo-wrap">
+          <img class="profile__photo"
+               src="https://placehold.co/200x200/e2e8f0/64748b?text=Photo"
+               alt="Your Name">
+        </div>
+        <div class="profile__bio">
+          <h1 class="profile__name">Your Name</h1>
+          <p class="profile__title">PhD Student &middot; Department of Computer Science &middot; University Name</p>
+          <p class="profile__text">
+            I am a researcher interested in machine learning, natural language processing, and
+            human-computer interaction. My work focuses on building systems that are both
+            technically robust and human-centered. I am advised by Prof. Advisor Name at
+            University Name.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         Contact Links
+    ============================== -->
+    <section class="section section--contact">
+      <div class="contact-links">
+        <a class="contact-link" href="https://github.com/username" target="_blank" rel="noopener">
+          <i class="fa-brands fa-github"></i>
+          <span>GitHub</span>
+        </a>
+        <a class="contact-link" href="mailto:you@example.com">
+          <i class="fa-solid fa-envelope"></i>
+          <span>Email</span>
+        </a>
+        <a class="contact-link" href="https://linkedin.com/in/username" target="_blank" rel="noopener">
+          <i class="fa-brands fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a class="contact-link" href="https://twitter.com/username" target="_blank" rel="noopener">
+          <i class="fa-brands fa-x-twitter"></i>
+          <span>Twitter / X</span>
+        </a>
+        <a class="contact-link" href="https://scholar.google.com/citations?user=XXXX" target="_blank" rel="noopener">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <span>Google Scholar</span>
+        </a>
+        <a class="contact-link" href="https://orcid.org/0000-0000-0000-0000" target="_blank" rel="noopener">
+          <i class="fa-brands fa-orcid"></i>
+          <span>ORCID</span>
+        </a>
+        <a class="contact-link" href="assets/cv.pdf" target="_blank" rel="noopener">
+          <i class="fa-solid fa-file-lines"></i>
+          <span>CV</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ==============================
+         Internships / Experience
+    ============================== -->
+    <section class="section section--internships">
+      <h2 class="section__title">Experience</h2>
+      <div class="card-grid">
+
+        <article class="card card--intern">
+          <div class="card__accent"></div>
+          <div class="card__body">
+            <h3 class="card__role">Research Intern</h3>
+            <p class="card__org">Company / Lab Name 1</p>
+            <p class="card__date">Jun 2024 &ndash; Aug 2024</p>
+            <ul class="card__bullets">
+              <li>Developed a pipeline for X using Y, reducing inference latency by Z%.</li>
+              <li>Collaborated with a team of N engineers on large-scale data processing.</li>
+              <li>Presented findings to stakeholders and contributed to an internal report.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card card--intern">
+          <div class="card__accent"></div>
+          <div class="card__body">
+            <h3 class="card__role">Software Engineering Intern</h3>
+            <p class="card__org">Company / Lab Name 2</p>
+            <p class="card__date">Jun 2023 &ndash; Aug 2023</p>
+            <ul class="card__bullets">
+              <li>Built feature A for product B, improving user engagement by C%.</li>
+              <li>Wrote unit and integration tests achieving 90%+ code coverage.</li>
+              <li>Participated in weekly code reviews and sprint planning.</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ==============================
+         Publications
+    ============================== -->
+    <section class="section section--publications">
+      <h2 class="section__title">Publications</h2>
+      <ol class="pub-list">
+
+        <li class="pub">
+          <span class="pub__year">2025</span>
+          <div class="pub__body">
+            <p class="pub__title">
+              <a href="#">Paper Title One: A Study of Something Interesting</a>
+            </p>
+            <p class="pub__authors">
+              Author A, <strong>Your Name</strong>, Author B, Author C
+            </p>
+            <p class="pub__venue">
+              <em>Proceedings of Conference / Journal Name (CONF 2025)</em>
+              <a class="pub__link" href="#">[PDF]</a>
+              <a class="pub__link" href="#">[Code]</a>
+              <a class="pub__link" href="#">[arXiv]</a>
+            </p>
+          </div>
+        </li>
+
+        <li class="pub">
+          <span class="pub__year">2024</span>
+          <div class="pub__body">
+            <p class="pub__title">
+              <a href="#">Paper Title Two: Another Contribution to the Field</a>
+            </p>
+            <p class="pub__authors">
+              <strong>Your Name</strong>, Author D, Author E
+            </p>
+            <p class="pub__venue">
+              <em>Workshop on Topic (WorkshopName @ CONF 2024)</em>
+              <a class="pub__link" href="#">[PDF]</a>
+              <a class="pub__link" href="#">[Slides]</a>
+            </p>
+          </div>
+        </li>
+
+      </ol>
+    </section>
+
+    <!-- ==============================
+         Skills
+    ============================== -->
+    <section class="section section--skills">
+      <h2 class="section__title">Skills</h2>
+      <div class="skill-tags">
+        <span class="tag">Python</span>
+        <span class="tag">PyTorch</span>
+        <span class="tag">TensorFlow</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">React</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Kubernetes</span>
+        <span class="tag">Linux</span>
+        <span class="tag">Git</span>
+        <span class="tag">SQL</span>
+        <span class="tag">C++</span>
+        <span class="tag">LaTeX</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Your Name &middot; Built with HTML &amp; CSS</p>
+  </footer>
+
+</body>
+</html>

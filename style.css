@@ -1,0 +1,316 @@
+/* ============================================================
+   CSS Variables
+   ============================================================ */
+:root {
+  --color-bg:       #f8fafc;
+  --color-surface:  #ffffff;
+  --color-border:   #e2e8f0;
+  --color-text:     #1e293b;
+  --color-muted:    #64748b;
+  --color-accent:   #2563eb;
+  --color-accent-2: #7c3aed;
+  --radius:         0.75rem;
+  --shadow:         0 1px 3px rgba(0, 0, 0, .08), 0 1px 2px rgba(0, 0, 0, .04);
+  --shadow-md:      0 4px 6px rgba(0, 0, 0, .07), 0 2px 4px rgba(0, 0, 0, .05);
+  --font:           'Inter', system-ui, sans-serif;
+  --max-width:      860px;
+}
+
+/* ============================================================
+   Reset & Base
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+/* ============================================================
+   Layout
+   ============================================================ */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 1.25rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* ============================================================
+   Section title (shared)
+   ============================================================ */
+.section__title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 1.25rem;
+  padding-bottom: .5rem;
+  border-bottom: 2px solid var(--color-border);
+}
+
+/* ============================================================
+   Profile
+   ============================================================ */
+.profile {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.profile__photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--color-border);
+  display: block;
+}
+
+.profile__bio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: .5rem;
+}
+
+.profile__name {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.profile__title {
+  color: var(--color-accent);
+  font-weight: 500;
+  font-size: .9375rem;
+}
+
+.profile__text {
+  color: var(--color-muted);
+  font-size: .9375rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 560px) {
+  .profile {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .profile__photo {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+/* ============================================================
+   Contact Links
+   ============================================================ */
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .625rem;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .45rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: .875rem;
+  font-weight: 500;
+  background: var(--color-surface);
+  box-shadow: var(--shadow);
+  transition: border-color .15s, color .15s, box-shadow .15s;
+}
+
+.contact-link:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-link i {
+  font-size: 1rem;
+}
+
+/* ============================================================
+   Card Grid (Internships)
+   ============================================================ */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: box-shadow .2s, transform .2s;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.card__accent {
+  height: 4px;
+  background: var(--color-accent);
+}
+
+.card--intern:nth-child(2) .card__accent {
+  background: var(--color-accent-2);
+}
+
+.card__body {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.card__role {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: .2rem;
+}
+
+.card__org {
+  color: var(--color-accent);
+  font-weight: 500;
+  font-size: .9375rem;
+  margin-bottom: .2rem;
+}
+
+.card__date {
+  color: var(--color-muted);
+  font-size: .8125rem;
+  margin-bottom: .875rem;
+}
+
+.card__bullets {
+  padding-left: 1.1rem;
+  color: var(--color-muted);
+  font-size: .875rem;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+
+/* ============================================================
+   Publications
+   ============================================================ */
+.pub-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pub {
+  display: flex;
+  gap: 1.25rem;
+  align-items: baseline;
+}
+
+.pub__year {
+  flex-shrink: 0;
+  width: 3rem;
+  font-weight: 700;
+  font-size: .875rem;
+  color: var(--color-accent);
+}
+
+.pub__body {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+}
+
+.pub__title a {
+  color: var(--color-text);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: .9375rem;
+  line-height: 1.4;
+}
+
+.pub__title a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.pub__authors {
+  color: var(--color-muted);
+  font-size: .875rem;
+}
+
+.pub__venue {
+  font-size: .875rem;
+  color: var(--color-muted);
+}
+
+.pub__link {
+  margin-left: .5rem;
+  color: var(--color-accent);
+  font-weight: 500;
+  text-decoration: none;
+  font-size: .8125rem;
+}
+
+.pub__link:hover {
+  text-decoration: underline;
+}
+
+/* ============================================================
+   Skills
+   ============================================================ */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: .3rem .85rem;
+  background: #eff6ff;
+  color: var(--color-accent);
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+  font-size: .8125rem;
+  font-weight: 500;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--color-muted);
+  font-size: .8125rem;
+  border-top: 1px solid var(--color-border);
+}
